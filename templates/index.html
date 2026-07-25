@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Diabetes Prediction{% endblock %}
+{% block content %}
+
+<div class="card shadow-lg p-4 mt-2">
+    <h2 class="text-center mb-4">🩺 Diabetes Prediction System</h2>
+
+    <form action="/predict" method="post">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Pregnancies</label>
+                <input type="number" name="Pregnancies" min="0" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Glucose</label>
+                <input type="number" name="Glucose" min="0" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Blood Pressure</label>
+                <input type="number" name="BloodPressure" min="0" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Skin Thickness</label>
+                <input type="number" name="SkinThickness" min="0" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Insulin</label>
+                <input type="number" name="Insulin" min="0" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>BMI</label>
+                <input type="number" step="any" name="BMI" min="0" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Diabetes Pedigree Function</label>
+                <input type="number" step="any" name="DiabetesPedigreeFunction" min="0" class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Age</label>
+                <input type="number" name="Age" min="0" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary px-5">Predict</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
